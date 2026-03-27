@@ -1,0 +1,22 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/index.html
+  Cache-Control: no-cache
+
+/quickstart/index.html
+  Cache-Control: no-cache
+
+/clients/index.html
+  Cache-Control: no-cache
+
+/faq/index.html
+  Cache-Control: no-cache
+
+/styles/*
+  Cache-Control: public, max-age=3600
+
+/scripts/*
+  Cache-Control: public, max-age=3600

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>客户端配置 · 虎哥跑路了</title>
+  <meta name="description" content="常见客户端配置示例，少一点猜，多一点复制。" />
+  <link rel="stylesheet" href="/styles/ghost.css" />
+</head>
+<body data-page="clients">
+  <div class="noise"></div>
+  <header class="site-header shell">
+    <a class="brand" href="/">
+      <span class="brand-mark">PAOLU.DOCS</span>
+      <span class="brand-sub">客户端配置</span>
+    </a>
+    <nav class="top-nav">
+      <a href="/quickstart/">快速开始</a>
+      <a class="active" href="/clients/">客户端配置</a>
+      <a href="/faq/">常见问题</a>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="section-head compact">
+      <p class="eyebrow">Copy, Paste, Survive</p>
+      <h1>客户端配置</h1>
+      <p class="lead">参数就这几个，别在 UI 里瞎猜。机器已经够烦了。</p>
+    </section>
+
+    <section class="card-grid single-column">
+      <article class="panel">
+        <h2>通用参数</h2>
+        <div class="kv-list">
+          <div><span>Base URL</span><code data-copy>https://paolu.hudawang.cn/v1</code></div>
+          <div><span>API Key</span><code>你自己的 key</code></div>
+          <div><span>模型</span><code>按后台可用模型选择</code></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>Codex / OpenAI Compatible</h2>
+        <pre><code>base_url = "https://paolu.hudawang.cn/v1"
+api_key = "YOUR_API_KEY"</code></pre>
+        <p class="muted">最容易出错的是把地址写成根域名却没带 <code>/v1</code>。</p>
+      </article>
+
+      <article class="panel">
+        <h2>Cherry Studio</h2>
+        <ul class="checklist">
+          <li>供应商类型选 OpenAI 兼容。</li>
+          <li>API 地址填 <code data-copy>https://paolu.hudawang.cn/v1</code></li>
+          <li>密钥填你自己的 token。</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <h2>Open WebUI / 其他兼容客户端</h2>
+        <p>只要支持 OpenAI Compatible，大概率都能接。前提是你别把斜杠和域名抄出灵异事故。</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="/scripts/app.js" defer></script>
+</body>
+</html>

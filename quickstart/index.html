@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>快速开始 · 虎哥跑路了</title>
+  <meta name="description" content="三分钟接上 paolu API，少走点弯路，少受点气。" />
+  <link rel="stylesheet" href="/styles/ghost.css" />
+</head>
+<body data-page="quickstart">
+  <div class="noise"></div>
+  <header class="site-header shell">
+    <a class="brand" href="/">
+      <span class="brand-mark">PAOLU.DOCS</span>
+      <span class="brand-sub">快速开始</span>
+    </a>
+    <nav class="top-nav">
+      <a class="active" href="/quickstart/">快速开始</a>
+      <a href="/clients/">客户端配置</a>
+      <a href="/faq/">常见问题</a>
+    </nav>
+  </header>
+
+  <main class="shell docs-layout">
+    <aside class="sidebar">
+      <p class="sidebar-title">这页讲什么</p>
+      <a href="#need">你需要准备什么</a>
+      <a href="#steps">三步接入</a>
+      <a href="#curl">最小测试</a>
+    </aside>
+
+    <article class="doc-content">
+      <p class="eyebrow">Last Chance Guide</p>
+      <h1>快速开始</h1>
+      <p class="lead">真的不复杂。复杂的是人类喜欢把简单事情搞得像召唤邪神。</p>
+
+      <section id="need" class="doc-section">
+        <h2>你需要准备什么</h2>
+        <ul class="checklist">
+          <li>一个能登录后台的账号。</li>
+          <li>一枚你自己创建的 API Key。</li>
+          <li>这个地址：<code data-copy>https://paolu.hudawang.cn/v1</code></li>
+        </ul>
+      </section>
+
+      <section id="steps" class="doc-section">
+        <h2>三步接入</h2>
+        <div class="stack">
+          <div class="panel">
+            <h3>第一步：创建令牌</h3>
+            <p>登录后台后创建一个 token。名字随意，但别起成 <code>test123</code> 然后两天后问自己这玩意是谁的。</p>
+          </div>
+          <div class="panel">
+            <h3>第二步：填客户端</h3>
+            <p>把 <code data-copy>https://paolu.hudawang.cn/v1</code> 填到 Base URL，把你的 key 填到 API Key。</p>
+          </div>
+          <div class="panel">
+            <h3>第三步：先测，再幻想</h3>
+            <p>先确认最小请求能过，再去改模型、代理、系统提示词和那些带来幻觉的高级选项。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="curl" class="doc-section">
+        <h2>最小测试</h2>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>curl https://paolu.hudawang.cn/v1/models \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+        </div>
+        <p class="muted">能拿到模型列表，说明门是开着的。拿不到，就去 <a href="/faq/">FAQ</a> 对照死因。</p>
+      </section>
+    </article>
+  </main>
+
+  <script src="/scripts/app.js" defer></script>
+</body>
+</html>
