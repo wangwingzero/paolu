@@ -25,6 +25,8 @@
       <p class="sidebar-title">这页讲什么</p>
       <a href="#need">你需要准备什么</a>
       <a href="#steps">三步接入</a>
+      <a href="#sites">站点区别</a>
+      <a href="#figure">填写示意</a>
       <a href="#curl">最小测试</a>
     </aside>
 
@@ -37,8 +39,8 @@
         <h2>你需要准备什么</h2>
         <ul class="checklist">
           <li><a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noreferrer">cc-switch</a></li>
-          <li>这个地址：<code data-copy>https://paolu.hudawang.cn/v1</code></li>
-          <li>你自己的 API Key。</li>
+          <li>先搞清楚你要用的是 `paolu` 还是 `luo`，这两个站不是同一个站。</li>
+          <li>你自己的 API Key，格式示例：<code data-copy>sk-XXXXXXXXXXXXXXXXXXXXXXXX</code></li>
         </ul>
       </section>
 
@@ -51,13 +53,64 @@
           </div>
           <div class="panel">
             <h3>第二步：新建自定义配置</h3>
-            <p>在 <code>cc-switch</code> 里新建一个自定义配置，把 <code data-copy>https://paolu.hudawang.cn/v1</code> 填到 URL。</p>
+            <p>在 <code>cc-switch</code> 里新建一个自定义配置。这里最容易翻车：<strong>两个网站不一样，URL 也不一样</strong>。</p>
           </div>
           <div class="panel">
             <h3>第三步：填 key 然后打开 Codex</h3>
-            <p>把 API Key 填进去，保存，重新打开 Codex。到这里就够了，别再给流程加支线任务。</p>
+            <p>把 API Key 填进去，格式示例就是 <code data-copy>sk-XXXXXXXXXXXXXXXXXXXXXXXX</code>。保存，重新打开 Codex。到这里就够了，别再给流程加支线任务。</p>
           </div>
         </div>
+      </section>
+
+      <section id="sites" class="doc-section">
+        <div class="panel warning-panel">
+          <p class="eyebrow">Do Not Mix Them Up</p>
+          <h2>这两个网站不一样，填错就会报错</h2>
+          <p>很多人都错在这里：`paolu` 和 `luo` 看着像一家的，但你在 `cc-switch` 里填的是具体某一个站的 API URL。不要把 A 站的 key 和 B 站的 URL 混着填。</p>
+        </div>
+      </section>
+
+      <section class="doc-section code-stack">
+        <article class="code-card">
+          <h3>如果你用 `paolu` 站</h3>
+          <p>站点入口：<a href="https://paolu.hudawang.cn/" target="_blank" rel="noreferrer">https://paolu.hudawang.cn/</a></p>
+          <div class="terminal copy-block" data-copy-block="https://paolu.hudawang.cn/v1">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code>https://paolu.hudawang.cn/v1</code></pre>
+          </div>
+        </article>
+
+        <article class="code-card">
+          <h3>如果你用 `luo` 站</h3>
+          <p>站点入口：<a href="https://luo.hudawang.cn/" target="_blank" rel="noreferrer">https://luo.hudawang.cn/</a></p>
+          <div class="terminal copy-block" data-copy-block="https://luo.hudawang.cn/v1">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code>https://luo.hudawang.cn/v1</code></pre>
+          </div>
+        </article>
+
+        <article class="code-card">
+          <h3>API Key 示例</h3>
+          <p>key 格式就长这样，别把示例里的 X 当成真实密钥。</p>
+          <div class="terminal copy-block" data-copy-block="sk-XXXXXXXXXXXXXXXXXXXXXXXX">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code>sk-XXXXXXXXXXXXXXXXXXXXXXXX</code></pre>
+          </div>
+        </article>
+      </section>
+
+      <section id="figure" class="doc-section">
+        <article class="panel figure-panel">
+          <h2>cc-switch 里大概就填成这样</h2>
+          <p class="muted">箭头指的就是最容易填错的两个地方：上面是 <code>sk-...</code> key，下面是你选中的站点对应 URL。</p>
+          <img src="/assets/cc-switch-example.svg" alt="CC Switch 配置示意图" />
+        </article>
       </section>
 
       <section class="doc-section">
@@ -80,12 +133,12 @@
 
       <section id="curl" class="doc-section">
         <h2>如果你非要测一下</h2>
-        <div class="terminal">
+        <div class="terminal copy-block" data-copy-block="curl https://paolu.hudawang.cn/v1/models &#10;  -H &quot;Authorization: Bearer sk-XXXXXXXXXXXXXXXXXXXXXXXX&quot;">
           <div class="terminal-bar">
             <span></span><span></span><span></span>
           </div>
           <pre><code>curl https://paolu.hudawang.cn/v1/models \
-  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+  -H "Authorization: Bearer sk-XXXXXXXXXXXXXXXXXXXXXXXX"</code></pre>
         </div>
         <p class="muted">能拿到模型列表，说明路没堵死。拿不到，先检查是不是 URL 或 key 抄错了。</p>
       </section>

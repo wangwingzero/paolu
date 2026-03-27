@@ -32,33 +32,63 @@
         <h2>通用参数</h2>
         <div class="kv-list">
           <div><span>下载地址</span><code data-copy>https://github.com/farion1231/cc-switch</code></div>
-          <div><span>Base URL</span><code data-copy>https://paolu.hudawang.cn/v1</code></div>
-          <div><span>API Key</span><code>你自己的 key</code></div>
+          <div><span>API Key 示例</span><code data-copy>sk-XXXXXXXXXXXXXXXXXXXXXXXX</code></div>
         </div>
       </article>
 
-      <article class="panel">
-        <h2>cc-switch 里只填这两个</h2>
-        <pre><code>URL = https://paolu.hudawang.cn/v1
-API Key = YOUR_API_KEY</code></pre>
-        <p class="muted">别额外发明配置项。你需要的是能用，不是参加参数设计大赛。</p>
+      <article class="panel warning-panel">
+        <h2>先分清：`paolu` 和 `luo` 不是同一个站</h2>
+        <p>它们站点入口不同，API URL 也不同。用哪个站，就填哪个站的 <code>/v1</code>。最常见的错误，就是站点 A 的 key 配了站点 B 的 URL。</p>
       </article>
 
-      <article class="panel">
-        <h2>最短流程</h2>
-        <ol class="steps">
-          <li>下载 <code>cc-switch</code></li>
-          <li>新建自定义配置</li>
-          <li>填 URL</li>
-          <li>填 key</li>
-          <li>重新打开 Codex</li>
-        </ol>
+      <article class="code-card">
+        <h2>如果你用 `paolu` 站</h2>
+        <p>站点入口：<a href="https://paolu.hudawang.cn/" target="_blank" rel="noreferrer">https://paolu.hudawang.cn/</a></p>
+        <div class="terminal copy-block" data-copy-block="https://paolu.hudawang.cn/v1">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>https://paolu.hudawang.cn/v1</code></pre>
+        </div>
+      </article>
+
+      <article class="code-card">
+        <h2>如果你用 `luo` 站</h2>
+        <p>站点入口：<a href="https://luo.hudawang.cn/" target="_blank" rel="noreferrer">https://luo.hudawang.cn/</a></p>
+        <div class="terminal copy-block" data-copy-block="https://luo.hudawang.cn/v1">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>https://luo.hudawang.cn/v1</code></pre>
+        </div>
+      </article>
+
+      <article class="code-card">
+        <h2>API Key 示例</h2>
+        <p>key 就是这种格式：</p>
+        <div class="terminal copy-block" data-copy-block="sk-XXXXXXXXXXXXXXXXXXXXXXXX">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>sk-XXXXXXXXXXXXXXXXXXXXXXXX</code></pre>
+        </div>
+      </article>
+
+      <article class="panel figure-panel">
+        <h2>cc-switch 填写示意</h2>
+        <p class="muted">上面填 <code>sk-...</code>，下面填站点对应 URL。不要交叉填。</p>
+        <img src="/assets/cc-switch-example.svg" alt="CC Switch 配置示意图" />
       </article>
 
       <article class="panel">
         <h2>手搓 curl 测试</h2>
-        <pre><code>curl https://paolu.hudawang.cn/v1/models \
-  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+        <div class="terminal copy-block" data-copy-block="curl https://paolu.hudawang.cn/v1/models &#10;  -H &quot;Authorization: Bearer sk-XXXXXXXXXXXXXXXXXXXXXXXX&quot;">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>curl https://paolu.hudawang.cn/v1/models \
+  -H "Authorization: Bearer sk-XXXXXXXXXXXXXXXXXXXXXXXX"</code></pre>
+        </div>
         <p class="muted">这是备用确认手段，不是主线剧情。</p>
       </article>
     </section>

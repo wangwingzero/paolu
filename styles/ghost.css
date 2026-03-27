@@ -133,7 +133,11 @@ pre {
 .info-card,
 .terminal,
 .sidebar,
-.faq-item {
+.faq-item,
+.status-hero-card,
+.status-rail-card,
+.service-card,
+.feed-item {
   border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(13, 18, 26, 0.96), rgba(10, 14, 22, 0.9));
   border-radius: var(--radius);
@@ -168,6 +172,11 @@ h1 {
   font-size: clamp(2.8rem, 5.6vw, 5rem);
   line-height: 0.96;
   letter-spacing: -0.05em;
+}
+
+.page-title {
+  font-size: clamp(2.4rem, 4.4vw, 4rem);
+  line-height: 1.02;
 }
 
 h2 {
@@ -270,8 +279,212 @@ code[data-copy],
   cursor: pointer;
 }
 
+.copy-block {
+  position: relative;
+  cursor: pointer;
+}
+
+.copy-block::after {
+  content: "点击复制";
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+.copy-block:hover::after {
+  color: var(--accent);
+}
+
+.warning-panel {
+  border: 1px solid rgba(255, 141, 141, 0.28);
+  background: linear-gradient(180deg, rgba(34, 14, 18, 0.94), rgba(20, 10, 12, 0.92));
+}
+
+.warning-panel h2,
+.warning-panel h3 {
+  color: #ffe3e3;
+}
+
+.code-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.code-card {
+  padding: 22px 24px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: rgba(8, 12, 18, 0.84);
+  box-shadow: var(--shadow);
+}
+
+.code-card p {
+  color: var(--muted);
+}
+
+.figure-panel {
+  padding: 24px;
+}
+
+.figure-panel img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #f3f4f6;
+}
+
 .section {
   padding: 18px 0 28px;
+}
+
+.status-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.72fr);
+  gap: 18px;
+}
+
+.status-hero-card,
+.status-rail-card {
+  padding: 28px;
+}
+
+.status-hero-card {
+  display: grid;
+  gap: 20px;
+}
+
+.status-kicker,
+.feed-time,
+.service-host,
+.service-stats span {
+  color: var(--muted);
+}
+
+.status-title {
+  margin-bottom: 10px;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  letter-spacing: -0.04em;
+}
+
+.status-title.is-operational,
+.status-pill.is-operational {
+  color: #7ef0a3;
+}
+
+.status-title.is-degraded,
+.status-pill.is-degraded {
+  color: #ffd36f;
+}
+
+.status-title.is-outage,
+.status-pill.is-outage {
+  color: #ff8d8d;
+}
+
+.status-meta-grid,
+.service-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.service-stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.status-meta-box {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(8, 12, 18, 0.7);
+  border: 1px solid rgba(145, 243, 255, 0.12);
+}
+
+.status-meta-box span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.status-grid,
+.status-feed {
+  display: grid;
+  gap: 18px;
+}
+
+.status-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-card {
+  padding: 24px;
+}
+
+.service-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.service-name {
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+}
+
+.service-summary {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.service-stats {
+  margin: 18px 0;
+}
+
+.service-stats div {
+  padding: 14px 16px;
+  border: 1px solid rgba(145, 243, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(8, 12, 18, 0.58);
+}
+
+.service-stats strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.06rem;
+}
+
+.service-link {
+  color: var(--accent);
+}
+
+.feed-item {
+  padding: 20px 22px;
+}
+
+.feed-item h3 {
+  margin-bottom: 8px;
+}
+
+.feed-item p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
 .section-head {
@@ -428,7 +641,9 @@ code[data-copy],
   .split-layout,
   .docs-layout,
   .card-grid,
-  .quick-links {
+  .quick-links,
+  .status-overview,
+  .status-grid {
     grid-template-columns: 1fr;
   }
 
@@ -456,7 +671,16 @@ code[data-copy],
   .status-card,
   .info-card,
   .panel,
-  .faq-item {
+  .faq-item,
+  .status-hero-card,
+  .status-rail-card,
+  .service-card,
+  .feed-item {
     padding: 20px;
+  }
+
+  .status-meta-grid,
+  .service-stats {
+    grid-template-columns: 1fr;
   }
 }

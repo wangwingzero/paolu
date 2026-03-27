@@ -1,0 +1,30 @@
+<svg width="1600" height="1120" viewBox="0 0 1600 1120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1120" rx="24" fill="#F3F4F6"/>
+  <rect x="0" y="0" width="1600" height="54" fill="#EAEAEA"/>
+  <text x="26" y="36" fill="#1F2937" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="26" font-weight="600">CC Switch</text>
+  <text x="86" y="126" fill="#111827" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">编辑供应商</text>
+  <rect x="46" y="78" width="64" height="64" rx="22" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+  <path d="M77 110H98" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+  <path d="M82 100L71 110L82 120" stroke="#6B7280" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="84" y="304" fill="#111827" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24" font-weight="600">供应商名称</text>
+  <rect x="84" y="326" width="710" height="64" rx="18" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="108" y="368" fill="#111827" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24">虎哥跑路</text>
+  <text x="824" y="304" fill="#111827" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24" font-weight="600">备注</text>
+  <rect x="824" y="326" width="710" height="64" rx="18" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="850" y="368" fill="#9CA3AF" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24">例如：公司专用账号</text>
+  <text x="84" y="472" fill="#111827" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24" font-weight="600">官网链接</text>
+  <rect x="84" y="494" width="1450" height="64" rx="18" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="108" y="536" fill="#9CA3AF" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24">https://example.com （可选）</text>
+  <text x="84" y="646" fill="#111827" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">API Key</text>
+  <rect x="84" y="668" width="1450" height="72" rx="22" fill="#FFFFFF" stroke="#BFD2F8" stroke-width="4"/>
+  <text x="108" y="714" fill="#111827" font-family="Consolas, monospace" font-size="26">sk-XXXXXXXXXXXXXXXXXXXXXXXX</text>
+  <text x="84" y="822" fill="#111827" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">API 请求地址</text>
+  <rect x="84" y="844" width="1450" height="64" rx="18" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="108" y="886" fill="#111827" font-family="Consolas, monospace" font-size="26">https://paolu.hudawang.cn/v1</text>
+  <rect x="84" y="928" width="1450" height="88" rx="20" fill="#FFF8DB" stroke="#F1D36B" stroke-width="2"/>
+  <text x="112" y="980" fill="#D97706" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22">填写兼容 OpenAI Response 格式的服务端点地址</text>
+  <path d="M968 596L888 666" stroke="#FF5C57" stroke-width="6" stroke-linecap="round"/>
+  <path d="M936 666L888 666L903 621" stroke="#FF5C57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1120 786L1030 860" stroke="#FF5C57" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1078 860L1030 860L1047 814" stroke="#FF5C57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
