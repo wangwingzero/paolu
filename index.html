@@ -20,6 +20,7 @@
     <nav class="top-nav">
       <a href="/quickstart/">快速开始</a>
       <a href="/clients/">客户端配置</a>
+      <a href="/status/">系统状态</a>
     </nav>
   </header>
 
@@ -46,9 +47,9 @@
             <span>备用入口</span>
             <strong>luo.hudawang.cn</strong>
           </a>
-          <a class="quick-link" href="https://status.hudawang.cn/" target="_blank" rel="noreferrer">
+          <a class="quick-link" href="/status/">
             <span>状态页</span>
-            <strong>status.hudawang.cn</strong>
+            <strong>/status/</strong>
           </a>
         </div>
       </div>
@@ -59,12 +60,12 @@
           <code data-copy>https://github.com/farion1231/cc-switch</code>
         </div>
         <div class="status-block">
-          <span>Base URL</span>
-          <code data-copy>https://paolu.hudawang.cn/v1</code>
+          <span>API Key 示例</span>
+          <code data-copy>sk-XXXXXXXXXXXXXXXXXXXXXXXX</code>
         </div>
         <div class="status-block">
-          <span>API Key</span>
-          <code>你自己的 key</code>
+          <span>状态页</span>
+          <code data-copy>https://status.hudawang.cn/</code>
         </div>
         <p class="status-tip">这三样抄对了，基本就能用。抄错了，谁都救不了你。</p>
       </aside>
@@ -91,25 +92,40 @@
 
     <section class="section shell">
       <div class="section-head">
-        <p class="eyebrow">Direct Doors</p>
-        <h2>常用入口</h2>
-        <p class="lead">有些人连入口都要问第二遍。那就把门直接摆这儿，点一下进去，少走弯路。</p>
+        <p class="eyebrow">Do Not Mix Them Up</p>
+        <h2>先分清：`paolu` 和 `luo` 不是同一个网站</h2>
+        <p class="lead">很多人翻车就翻在这里：两个站入口不一样，API URL 也不一样。你用哪个站，就填哪个站对应的 <code>/v1</code>。</p>
       </div>
-      <div class="card-grid">
-        <article class="info-card">
-          <h3>paolu.hudawang.cn</h3>
-          <p>主站入口。你大多数时候真正要去的是这个。</p>
-          <a href="https://paolu.hudawang.cn/" target="_blank" rel="noreferrer">打开主站 →</a>
+      <div class="code-stack">
+        <article class="code-card">
+          <h3>如果你用 `paolu` 站</h3>
+          <p>站点入口：<a href="https://paolu.hudawang.cn/" target="_blank" rel="noreferrer">https://paolu.hudawang.cn/</a></p>
+          <div class="terminal copy-block" data-copy-block="https://paolu.hudawang.cn/v1">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code>https://paolu.hudawang.cn/v1</code></pre>
+          </div>
         </article>
-        <article class="info-card">
-          <h3>luo.hudawang.cn</h3>
-          <p>另一套可直接访问的站点入口。别记错字，也别多打空格。</p>
-          <a href="https://luo.hudawang.cn/" target="_blank" rel="noreferrer">打开 luo →</a>
+        <article class="code-card">
+          <h3>如果你用 `luo` 站</h3>
+          <p>站点入口：<a href="https://luo.hudawang.cn/" target="_blank" rel="noreferrer">https://luo.hudawang.cn/</a></p>
+          <div class="terminal copy-block" data-copy-block="https://luo.hudawang.cn/v1">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code>https://luo.hudawang.cn/v1</code></pre>
+          </div>
         </article>
-        <article class="info-card">
-          <h3>status.hudawang.cn</h3>
-          <p>状态页。想知道是不是站挂了，先看这里，别上来就怀疑人生。</p>
-          <a href="https://status.hudawang.cn/" target="_blank" rel="noreferrer">打开状态页 →</a>
+        <article class="code-card">
+          <h3>API Key 示例</h3>
+          <p>key 的格式就长这样。别把示例里的 X 当成真的一并抄进去。</p>
+          <div class="terminal copy-block" data-copy-block="sk-XXXXXXXXXXXXXXXXXXXXXXXX">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code>sk-XXXXXXXXXXXXXXXXXXXXXXXX</code></pre>
+          </div>
         </article>
       </div>
     </section>
@@ -117,11 +133,11 @@
     <section class="section shell split-layout">
       <article class="panel">
         <p class="eyebrow">The Bare Minimum</p>
-        <h2>你只需要记住两样东西</h2>
+        <h2>你真正需要抄的就这两样</h2>
         <ul class="checklist">
           <li>先下载：<a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noreferrer">https://github.com/farion1231/cc-switch</a></li>
-          <li>API 地址：<code data-copy>https://paolu.hudawang.cn/v1</code></li>
-          <li>你自己的 API Key，不是别人的，不是截图里的，不是群文件里的。</li>
+          <li>API 地址：填你选中的站点对应 URL，不要混填。</li>
+          <li>API Key：格式示例是 <code data-copy>sk-XXXXXXXXXXXXXXXXXXXXXXXX</code></li>
         </ul>
       </article>
       <article class="panel">
@@ -130,20 +146,28 @@
         <ol class="steps">
           <li>下载并打开 <code>cc-switch</code>。</li>
           <li>新建一个自定义配置。</li>
-          <li>把 Base URL 填成 <code data-copy>https://paolu.hudawang.cn/v1</code>。</li>
-          <li>把 API Key 填成你自己的 key。</li>
+          <li>把 API URL 填成你选中的站点对应 <code>/v1</code>。</li>
+          <li>把 API Key 填成你自己的 <code>sk-...</code> key。</li>
           <li>保存后重新打开 Codex，就这么多，别自己给自己加戏。</li>
         </ol>
       </article>
     </section>
 
     <section class="section shell">
-      <div class="terminal">
+      <article class="panel figure-panel">
+        <h2>cc-switch 里大概就填成这样</h2>
+        <p class="muted">上面填 <code>sk-...</code> key，下面填站点对应 URL。谁和谁别串线，系统不会替你脑补。</p>
+        <img src="/assets/cc-switch-example.svg" alt="CC Switch 配置示意图" />
+      </article>
+    </section>
+
+    <section class="section shell">
+      <div class="terminal copy-block" data-copy-block="curl https://paolu.hudawang.cn/v1/models &#10;  -H &quot;Authorization: Bearer sk-XXXXXXXXXXXXXXXXXXXXXXXX&quot;">
         <div class="terminal-bar">
           <span></span><span></span><span></span>
         </div>
         <pre><code>curl https://paolu.hudawang.cn/v1/models \
-  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+  -H "Authorization: Bearer sk-XXXXXXXXXXXXXXXXXXXXXXXX"</code></pre>
         <p class="terminal-note">如果你非想确认通不通，就跑这条。否则照着填完直接用。</p>
       </div>
     </section>
