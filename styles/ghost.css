@@ -193,6 +193,37 @@ h3 {
   margin-top: 26px;
 }
 
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.quick-link {
+  display: grid;
+  gap: 6px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(145, 243, 255, 0.12);
+  background: rgba(8, 12, 18, 0.64);
+}
+
+.quick-link span {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.quick-link strong {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.quick-link:hover {
+  border-color: rgba(145, 243, 255, 0.34);
+  transform: translateY(-1px);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -396,7 +427,8 @@ code[data-copy],
   .hero,
   .split-layout,
   .docs-layout,
-  .card-grid {
+  .card-grid,
+  .quick-links {
     grid-template-columns: 1fr;
   }
 
