@@ -17,7 +17,6 @@
     <nav class="top-nav">
       <a class="active" href="/quickstart/">快速开始</a>
       <a href="/clients/">客户端配置</a>
-      <a href="/faq/">常见问题</a>
     </nav>
   </header>
 
@@ -32,14 +31,14 @@
     <article class="doc-content">
       <p class="eyebrow">Last Chance Guide</p>
       <h1>快速开始</h1>
-      <p class="lead">真的不复杂。复杂的是人类喜欢把简单事情搞得像召唤邪神。</p>
+      <p class="lead">真的不复杂。复杂的是总有人喜欢把“填 URL 和 key”演成一场软件祭祀。</p>
 
       <section id="need" class="doc-section">
         <h2>你需要准备什么</h2>
         <ul class="checklist">
-          <li>一个能登录后台的账号。</li>
-          <li>一枚你自己创建的 API Key。</li>
+          <li><a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noreferrer">cc-switch</a></li>
           <li>这个地址：<code data-copy>https://paolu.hudawang.cn/v1</code></li>
+          <li>你自己的 API Key。</li>
         </ul>
       </section>
 
@@ -47,22 +46,22 @@
         <h2>三步接入</h2>
         <div class="stack">
           <div class="panel">
-            <h3>第一步：创建令牌</h3>
-            <p>登录后台后创建一个 token。名字随意，但别起成 <code>test123</code> 然后两天后问自己这玩意是谁的。</p>
+            <h3>第一步：下载 cc-switch</h3>
+            <p>先去 <a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noreferrer">GitHub</a> 下载。兵器都没领，别急着问剑招。</p>
           </div>
           <div class="panel">
-            <h3>第二步：填客户端</h3>
-            <p>把 <code data-copy>https://paolu.hudawang.cn/v1</code> 填到 Base URL，把你的 key 填到 API Key。</p>
+            <h3>第二步：新建自定义配置</h3>
+            <p>在 <code>cc-switch</code> 里新建一个自定义配置，把 <code data-copy>https://paolu.hudawang.cn/v1</code> 填到 URL。</p>
           </div>
           <div class="panel">
-            <h3>第三步：先测，再幻想</h3>
-            <p>先确认最小请求能过，再去改模型、代理、系统提示词和那些带来幻觉的高级选项。</p>
+            <h3>第三步：填 key 然后打开 Codex</h3>
+            <p>把 API Key 填进去，保存，重新打开 Codex。到这里就够了，别再给流程加支线任务。</p>
           </div>
         </div>
       </section>
 
       <section id="curl" class="doc-section">
-        <h2>最小测试</h2>
+        <h2>如果你非要测一下</h2>
         <div class="terminal">
           <div class="terminal-bar">
             <span></span><span></span><span></span>
@@ -70,7 +69,7 @@
           <pre><code>curl https://paolu.hudawang.cn/v1/models \
   -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
         </div>
-        <p class="muted">能拿到模型列表，说明门是开着的。拿不到，就去 <a href="/faq/">FAQ</a> 对照死因。</p>
+        <p class="muted">能拿到模型列表，说明路没堵死。拿不到，先检查是不是 URL 或 key 抄错了。</p>
       </section>
     </article>
   </main>

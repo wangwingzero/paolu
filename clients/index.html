@@ -17,7 +17,6 @@
     <nav class="top-nav">
       <a href="/quickstart/">快速开始</a>
       <a class="active" href="/clients/">客户端配置</a>
-      <a href="/faq/">常见问题</a>
     </nav>
   </header>
 
@@ -32,31 +31,35 @@
       <article class="panel">
         <h2>通用参数</h2>
         <div class="kv-list">
+          <div><span>下载地址</span><code data-copy>https://github.com/farion1231/cc-switch</code></div>
           <div><span>Base URL</span><code data-copy>https://paolu.hudawang.cn/v1</code></div>
           <div><span>API Key</span><code>你自己的 key</code></div>
-          <div><span>模型</span><code>按后台可用模型选择</code></div>
         </div>
       </article>
 
       <article class="panel">
-        <h2>Codex / OpenAI Compatible</h2>
-        <pre><code>base_url = "https://paolu.hudawang.cn/v1"
-api_key = "YOUR_API_KEY"</code></pre>
-        <p class="muted">最容易出错的是把地址写成根域名却没带 <code>/v1</code>。</p>
+        <h2>cc-switch 里只填这两个</h2>
+        <pre><code>URL = https://paolu.hudawang.cn/v1
+API Key = YOUR_API_KEY</code></pre>
+        <p class="muted">别额外发明配置项。你需要的是能用，不是参加参数设计大赛。</p>
       </article>
 
       <article class="panel">
-        <h2>Cherry Studio</h2>
-        <ul class="checklist">
-          <li>供应商类型选 OpenAI 兼容。</li>
-          <li>API 地址填 <code data-copy>https://paolu.hudawang.cn/v1</code></li>
-          <li>密钥填你自己的 token。</li>
-        </ul>
+        <h2>最短流程</h2>
+        <ol class="steps">
+          <li>下载 <code>cc-switch</code></li>
+          <li>新建自定义配置</li>
+          <li>填 URL</li>
+          <li>填 key</li>
+          <li>重新打开 Codex</li>
+        </ol>
       </article>
 
       <article class="panel">
-        <h2>Open WebUI / 其他兼容客户端</h2>
-        <p>只要支持 OpenAI Compatible，大概率都能接。前提是你别把斜杠和域名抄出灵异事故。</p>
+        <h2>手搓 curl 测试</h2>
+        <pre><code>curl https://paolu.hudawang.cn/v1/models \
+  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+        <p class="muted">这是备用确认手段，不是主线剧情。</p>
       </article>
     </section>
   </main>

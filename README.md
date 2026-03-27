@@ -9,7 +9,6 @@
 ├─ index.html
 ├─ quickstart/index.html
 ├─ clients/index.html
-├─ faq/index.html
 ├─ styles/ghost.css
 ├─ scripts/app.js
 └─ _headers
@@ -29,7 +28,7 @@
 
 - 继续保持纯静态，不引入没必要的打包器
 - 新页面直接按 `目录/index.html` 的形式增加
-- 保持黑色幽默语气，但参数、地址、命令必须准确
+- 保持黑色幽默语气，但内容只保留最小接入说明
 - Base URL 统一写成：
 
 ```text
